@@ -74,7 +74,7 @@ const Hero = () => {
     }, []);
 
   return (
-    <div className='bg-white w-[90%] md:w-[70%] max-w-[800px] h-fit rounded-[40px] shadow-lg flex justify-center items-center flex-col gap-y-6 px-2 py-6'>
+    <div className='bg-white w-[90%] md:w-[70%] md:min-w-[700px] max-w-[800px] h-fit rounded-[40px] shadow-lg flex justify-center items-center flex-col gap-y-6 px-2 py-6'>
       
       <div className='text-3xl md:text-5xl text-center text-purple-600 pt-serif-caption-regular'>Currency Convertor</div>
       

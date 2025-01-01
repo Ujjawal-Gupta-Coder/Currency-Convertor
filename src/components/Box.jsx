@@ -29,11 +29,11 @@ const Box = ({type, currencyCode, setCurrencyCode, countryCode, setCountryCode, 
     <div>
       <div className='ml-5 font-bold'> {type} </div>
       
-      <div className='border-2 border-gray-600 flex items-center rounded-2xl px-4 py-1 gap-2 w-[170px]'>
+      <div className='border-2 border-gray-600 flex items-center rounded-2xl px-5 py-1 gap-4 w-[250px]'>
         <img src={flagURL} alt="Country Flag" />
         
         <div>
-          <select name={`${type}_CountryName`} className='w-fit md:w-[80px] outline-none font-semibold text-xl' value={countryName} onChange={handlcountryNameChange} >
+          <select name={`${type}_CountryName`} className='w-[140px] outline-none' value={countryName} onChange={handlcountryNameChange} >
             {
               codes.map((code, id) => {
                 return <option key={id} value={code.countryName} defaultChecked={code.countryName === countryName} > {code.countryName} </option>
@@ -41,7 +41,7 @@ const Box = ({type, currencyCode, setCurrencyCode, countryCode, setCountryCode, 
             }
           </select>
 
-          <select name={`${type}_currencyCode`} className='w-fit md:w-[80px] outline-none font-semibold text-xl' value={currencyCode} onChange={handleCurrencyCodeChange} >
+          <select name={`${type}_currencyCode`} className='w-[140px] outline-none font-semibold text-3xl' value={currencyCode} onChange={handleCurrencyCodeChange} >
             {
               codes.map((code, id) => {
                 return <option key={id} value={code.currencyCode} defaultChecked={code.currencyCode === currencyCode} > {code.currencyCode} </option>
@@ -50,17 +50,8 @@ const Box = ({type, currencyCode, setCurrencyCode, countryCode, setCountryCode, 
           </select>
         </div>
 
-
-
-
-
-
-
-
-
-
-
       </div>
+
     </div>
   )
 }
